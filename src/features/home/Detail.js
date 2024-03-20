@@ -8,7 +8,7 @@ const Detail = () => {
 
   return (
     <div>
-
+ <p> hello jeee how are</p>
     
 
 
