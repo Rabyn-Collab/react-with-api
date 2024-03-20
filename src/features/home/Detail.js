@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom"
-import data from "../dummy/products";
+import { data } from "../../dummy/products";
 
 
 const Detail = () => {
 
-    const { id } = useParams();
+  const { id } = useParams();
   const product = data.products.find((product) => product.id === parseInt(id));
   return (
     <div className="shadow-sm ">
@@ -45,10 +45,10 @@ const Detail = () => {
     </div>
   );
 };
- 
-}
+
+
 export default Detail
 
 
 
-  
+
