@@ -1,6 +1,6 @@
 const DisplaySection = () => {
   return (
-    <div className=" grid grid-cols-2 items-center bg-black text-white py-4">
+    <div className=" grid grid-cols-2 sm:grid-cols-1 items-center bg-black text-white py-4">
 
       <div className="animation">
 
@@ -10,7 +10,7 @@ const DisplaySection = () => {
       </div>
 
 
-      <div className="dis-info">
+      <div className="dis-info sm:px-7">
         <h1>Hi, I am John</h1>
         <p className="italic text-pink-600">Some Dev, Freelancer, Rounder</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quos optio incidunt. Ab sapiente dolorem nam aut a deleniti quas magnam! Doloribus debitis modi quod fuga dicta reprehenderit, cum laborum dolor sapiente sed delectus aspernatur eius sint itaque rerum aut perspiciatis rem quisquam, voluptatibus labore mollitia sit. Eaque, explicabo quam!</p>
