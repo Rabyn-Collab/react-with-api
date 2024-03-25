@@ -2,7 +2,7 @@ import { DiAndroid, DiCss3, DiGithubFull, DiJavascript, DiKomodo, DiNetmagazine,
 
 const Tech = () => {
   return (
-    <div className="my-9 space-y-9">
+    <div className="mt-9 mb-2 space-y-9">
       <h1 className="text-center font-semibold text-3xl">Technologies I Use</h1>
       <div className="grid grid-cols-auto-fit place-items-center gap-y-5 ">
 
