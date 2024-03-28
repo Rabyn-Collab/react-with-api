@@ -1,45 +1,46 @@
-import { useEffect, useState } from "react";
+import axios from "axios"
+import { useState } from "react";
 
 
 const Home = () => {
+  // const [mio, setMio] = useState(null);
 
-  const [text, setText] = useState('first value');
-  const [depend, setDepend] = useState(0);
+  // setTimeout(() => {
+  //   setMio('null bhayena')
 
-  const handleChange = (msg) => {
-    setText((prev) => {
-      console.log(prev);
-      return msg;
-    });
-  }
-
-  const handleDepend = () => {
-    setDepend((prev) => prev + 1);
-  }
-
-
-  useEffect(() => {
-    console.log('effect call');
-    setText('sd;lsd;flkk;sfdl');
-  }, [depend]);
+  // }, 5000)
+  const [award, setAward] = useState(null);
+  const person = {
+    name: 'lio',
+    li: {
+      msg: 90
+    }
+  };
 
 
-  console.log('render');
+
+
+  axios.get('https://www.omdbapi.com', {
+    params: {
+      t: 'spider',
+      apikey: '6905a701'
+    }
+  }).then((res) => {
+    console.log(res);
+    console.log('call it');
+    setAward(res.data.Awards);
+  }).catch((err) => {
+    // console.log(err.response.data.Error);
+  });
+
+
+
+
+  console.log('re render');
 
   return (
-    <div className="p-2">
-
-      <h1>{depend}</h1>
-
-      <button onClick={handleDepend} className="px-2  border-4 border-black   bg-black text-white font-serif font-boldrounded-lg">InCrement</button>
-      <br />
-      <br />
-
-      <button onClick={() => handleChange('lio')} className="px-2  border-4 border-black   bg-black text-white font-serif font-boldrounded-lg">Click me</button>
-
-      <h1>hello text----- {text}</h1>
-
-
+    <div>
+      {award && <h1>{award}</h1>}
     </div>
   )
 }
